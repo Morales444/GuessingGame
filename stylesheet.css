@@ -1,0 +1,18 @@
+div {
+    border: solid black 2px;
+    height: 17em;
+    width: 25em;
+    padding-left: 2em;
+}
+input {
+    width: 80px;
+    background-color: black;
+    color: white;
+
+}
+section {
+    text-align: right;
+    padding-bottom: 10em;
+    padding-right: 2em;
+
+}
