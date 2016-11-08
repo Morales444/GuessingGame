@@ -1,13 +1,15 @@
-div {
+div.all {
     border: solid black 2px;
     height: 17em;
     width: 25em;
     padding-left: 2em;
+    background-color: white;
+    margin: auto;
 }
 input {
     width: 80px;
-    background-color: black;
-    color: white;
+    background-color: #d2ecff;
+    color: #0b0b0b;
 
 }
 section {

@@ -2,21 +2,23 @@
  * Created by gisselle.ortega444 on 11/3/16.
  */
 
-var random = Math.floor(Math.random()* 9);
+var random = Math.floor(Math.random()* 10);
 function game(){
     "use strict";
-    var colors = ["RED", "BLUE", "GREEN",
-        "YELLOW", "BLACK", "WHITE",
-        "PURPLE", "PINK", "ORANGE", "GRAY"];
+    var colors = ["AQUA", "AZURE", "BLACK",
+        "GOLD", "GREEN", "MAROON",
+        "PINK", "PURPLE", "SILVER", "WHITE"];
     console.log(random);
     var userChoice = document.getElementById("input").value;
     var finished = false;
+    var finCol = colors[random];
 
 
     //indexOF
     do {
-        userChoice = prompt("Type in your answer here", "");
 
+        userChoice = prompt("Maroon, Aqua, Green, Silver, Black, White, Purple, Pink, Azure, Gold\n" +
+            "Which color am i thinking of", "");
         if ( colors.indexOf(userChoice.toUpperCase()) == -1  ){
             alert("Sorry, this is not a valid color or an empty string");
         }
@@ -33,6 +35,8 @@ function game(){
         }
         else {
             alert("Congratulations!!! You guessed the right color" );
+            var myBody = document.getElementsByTagName("body")[0];
+            myBody.style.background= finCol;
             finished = true;
         }
     }
