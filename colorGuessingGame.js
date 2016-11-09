@@ -12,12 +12,12 @@ function game(){
     var userChoice = document.getElementById("input").value;
     var finished = false;
     var finCol = colors[random];
-
+    var count = 0;
 
     //indexOF
     try {
         do {
-
+            count++;
             userChoice = prompt("Maroon, Aqua, Green, Silver, Black, White, Purple, Pink, Azure, Gold\n" +
                 "Which color am i thinking of?", "");
             if ( colors.indexOf(userChoice.toUpperCase()) == -1  ){
@@ -30,15 +30,18 @@ function game(){
                 )
             }
             else if (colors.indexOf(userChoice.toUpperCase())< random) {
+
                 alert ("Sorry, this color is incorrect \n" +
                     "Hint: your color is alphabetically lower than the answer \n" +
                     "Please try again")
             }
             else {
-                alert("Congratulations!!! You guessed the right color" );
+                alert("Congratulations!!! You guessed the right color\n" +
+                "It took you " + count + " guesses to finish the game");
                 var myBody = document.getElementsByTagName("body")[0];
                 myBody.style.background= finCol;
                 finished = true;
+                count= 0;
             }
         }
         while (
