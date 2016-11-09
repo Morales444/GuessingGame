@@ -1,15 +1,19 @@
 div.all {
-    border: solid black 2px;
+    border: dotted black 5px;
+    border-radius: 15px 50px;
     height: 17em;
-    width: 25em;
+    width: 29em;
     padding-left: 2em;
+    margin-left: 29em;
+    margin-top: 14em;
     background-color: white;
-    margin: auto;
+    font-family: "Times New Roman", Times, serif;;
 }
 input {
     width: 80px;
-    background-color: #d2ecff;
-    color: #0b0b0b;
+    color: black;
+    border: dashed black 1px;
+    border-radius: 50px 50px 50px 50px;
 
 }
 section {
@@ -18,3 +22,11 @@ section {
     padding-right: 2em;
 
 }
+label {
+    font-style: italic;
+}
+body {
+    background-image: url("img/color_circle.png");
+    background-color: #cccccc;
+}
+
